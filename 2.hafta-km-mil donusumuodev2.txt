@@ -1,0 +1,20 @@
+secim=input("Lutfen km-mil donusumu icin 1'e mil-km donusumu icin ise 2'ye basiniz\t:")
+try:
+    if secim=="1":
+        mil=float(input("Lutfen hesaplamak istediginiz mil degerinizi rakam ile giriniz\t:"))
+        if mil<0:
+            print("Girmis oldugunuz deger negatif bir deger olamaz!!!!")
+        else:
+            km=mil*1.61
+            print("{} mil = {} km".format(mil,km))
+    elif secim=="2":
+        km = float(input("Lutfen hesaplamak istediginiz km degerinizi rakam ile giriniz\t:"))
+        if km<0:
+            print("Girmis oldugunuz deger negatif bir deger olamaz!!!!")
+        else:
+            mil=km * 0.62
+            print("{} km = {} mil".format(km,mil))
+    else:
+        print("Lutfen girmis oldugunuz degerleri kontrol ediniz!!!!!!!!")
+except ValueError:
+    print("Yanlis bir deger girdiniz")

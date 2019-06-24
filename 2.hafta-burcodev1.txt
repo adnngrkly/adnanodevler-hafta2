@@ -1,0 +1,104 @@
+#odev=1
+
+try:
+
+    dogum_tarihi_gun=int(input("Lutfen dogum tarihinizin  gununu rakam  olucak sekilde (1-31) arasindan bir deger giriniz\t:"))
+    dogum_tarihi_ay=int(input("Lutfen dogum tarihinizin ayini rakam sekilde (1-12) arasindan bir deger giriniz\t:"))
+except ValueError or NameError:
+    print("Lutfen girdiginiz degerlerin dogrulugunu kontrol ediniz")
+    quit()
+
+if dogum_tarihi_gun>31 or dogum_tarihi_gun<1 or dogum_tarihi_ay>12 or dogum_tarihi_ay<1:
+    print("Girmis oldugunuz gun veya ay degerinde bir yanlislik vardir!!!!!")
+    quit()
+else:
+    pass
+
+if dogum_tarihi_ay==1:
+    if dogum_tarihi_gun<22:
+        print("oglak burcuna sahipsiniz")
+    elif 22<=dogum_tarihi_gun<=31:
+        print("Kova burcuna sahipsiniz")
+
+elif dogum_tarihi_ay==2:
+    if dogum_tarihi_gun<20:
+        print("kova burcuna sahipsiniz")
+    elif 20<=dogum_tarihi_gun<=29:
+        print("balik burcuna sahipsiniz")
+    elif dogum_tarihi_gun==30 or dogum_tarihi_gun==31:
+        print("subat ayi en fazla 29 cekmektedir")
+        quit()
+
+elif dogum_tarihi_ay==3:
+    if dogum_tarihi_gun<21:
+        print("balik burcuna sahipsiniz")
+    elif 21<=dogum_tarihi_gun<=31:
+        print("Koc burcuna sahipsiniz")
+
+elif dogum_tarihi_ay==4:
+    if dogum_tarihi_gun<21:
+        print("koc burcuna sahipsiniz")
+    elif 21<=dogum_tarihi_gun<=30:
+        print("boga burcuna sahipsiniz")
+    elif dogum_tarihi_gun==31:
+        print("nisan ayi en fazla 30 cekmektedir")
+        quit()
+
+elif dogum_tarihi_ay == 5:
+    if dogum_tarihi_gun <22:
+        print("boga burcuna sahipsiniz")
+    elif 22<=dogum_tarihi_gun<=31:
+        print("ikizler burcuna sahipsiniz")
+
+elif dogum_tarihi_ay==6:
+    if dogum_tarihi_gun<23:
+        print("ikizler burcuna sahipsiniz")
+    elif 23<=dogum_tarihi_gun<=30:
+        print("yengec burcuna sahipsiniz")
+    elif dogum_tarihi_gun==31:
+        print("haziran ayi en fazla 30 cekmektedir")
+        quit()
+
+elif dogum_tarihi_ay==7:
+    if dogum_tarihi_gun<23:
+        print("yengec burcuna sahipsiniz")
+    elif 23<=dogum_tarihi_gun<=31:
+        print("aslan burcuna sahipsiniz")
+
+elif dogum_tarihi_ay == 8:
+    if dogum_tarihi_gun <23:
+        print("aslan burcuna sahipsiniz")
+    elif 23<=dogum_tarihi_gun<=31:
+        print("basak burcuna sahipsiniz")
+
+elif dogum_tarihi_ay==9:
+    if dogum_tarihi_gun<23:
+        print("basak burcuna sahipsiniz")
+    elif 23<=dogum_tarihi_gun<=30:
+        print("terazi burcuna sahipsiniz")
+    elif dogum_tarihi_gun == 31:
+        print("eylul ayi en fazla 30 cekmektedir")
+        quit()
+
+elif dogum_tarihi_ay==10:
+    if dogum_tarihi_gun<23:
+        print("terazi burcuna sahipsiniz")
+    elif 23<=dogum_tarihi_gun<=31:
+        print("akrep burcuna sahipsiniz")
+
+elif dogum_tarihi_ay == 11:
+    if dogum_tarihi_gun < 22:
+        print("akrep burcuna sahipsiniz")
+    elif 22<=dogum_tarihi_gun<=30:
+        print("yay burcuna sahipsiniz")
+    elif dogum_tarihi_gun == 31:
+        print("kasim ayi en fazla 30 cekmektedir")
+        quit()
+
+elif dogum_tarihi_ay==12:
+    if dogum_tarihi_gun<22:
+        print("yay burcuna sahipsiniz")
+    elif 22<=dogum_tarihi_gun<=31:
+        print("oglak burcuna sahipsiniz")
+else:
+    print("Lutfen girmis ooldugunuz degerlerin dogrulugunu kontrol ediniz")  # Kullanicinin negatif sayi girmisine ihtimalen

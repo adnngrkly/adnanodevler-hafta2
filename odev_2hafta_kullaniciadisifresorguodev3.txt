@@ -1,0 +1,42 @@
+#odev=3
+
+
+yk1="0"
+yk2="1"
+yk3="2"
+yk4="3"
+yk5="4"
+yk6="5"
+yk7="6"
+yk8="7"
+yk9="8"
+yk10="9"
+
+
+username=input("Lutfen kullanici adinizi en az 3 karakter en fazla 18 karekter olucak sekilde giriniz\t:")
+usurnameuzunluk=len(username)
+
+if usurnameuzunluk not in range(3,19):
+    print("Lutfen girmis   oldugunuz karekter uzunlugunun gerekli uzunlukta oldugunu kontrol ediniz!!!!")
+    quit()
+
+elif yk1 in username or yk2  in username or yk3 in username or yk4 in username or yk5 in username or yk6 in username or yk7 in username or yk8 in username or yk9 in username or yk10 in username :
+    print("Girmis oldugunuz kullanici adinizin icinde  rakam  olmamalidir!!")
+    quit()
+else:
+    pass
+
+parola=input("Lutfen parolanizi en az 6 karakter en fazla 12 karekter olucak sekilde giriniz\t:")
+parolauzunluk=len(parola)
+
+if parolauzunluk not in range(6,13):
+    print("Girmis oldugunuz parola en az 6 en fazla 12 karekterden olusmalidir!!!")
+    quit()
+else:
+    print("isleminiz basari ile gerceklesmis olup","\n", "kullanici adiniz\t:",username,"\n","parolaniz\t\t\t:",parola,sep="")
+    pass
+dosya=open("Kullaniciadisifre2.haftabilgileri.txt","w")
+print("isleminiz basari ile gerceklesmis olup","\n", "kullanici adiniz\t:",username,"\n","parolaniz\t:",parola,sep="",file=dosya,flush=True)
+
+import os
+print(os.getcwd())

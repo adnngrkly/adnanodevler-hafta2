@@ -1,0 +1,44 @@
+#odev7
+
+tip=input("""Hangi geametrik seklin tipini bilmek istiyosunuz
+doktortgen icin 1
+ucgen icin 2 tusuna basiniz""")
+
+if "0"<tip<"3":
+    pass
+else:
+    print("Yanlis bir secim yaptiniz")
+
+if tip=="1":
+    kenar1=float(input("Birinci kenarin olcusunu giriniz"))
+    kenar2 = float(input("ikinci kenarin olcusunu giriniz"))
+    kenar3 = float(input("ucuncu kenarin olcusunu giriniz"))
+    kenar4 = float(input("dorduncu kenarin olcusunu giriniz"))
+    if kenar1==0 or kenar2==0 or kenar3==0 or kenar4==0:
+        print("Kenar uzunluklarini yanlis girdiniz lutfen kontrol adiniz!!!!")
+        quit()
+
+    if kenar1==kenar2==kenar3==kenar4:
+        print("Sectiginiz tip karedir")
+    elif kenar1==kenar3 and kenar2==kenar4:
+        print("sectiginiz tip dikdortgendir")
+    elif kenar1==kenar3 and kenar2!=kenar4 or kenar1!=kenar3 and kenar2==kenar4:
+        print("Sectiginiz tip yamuktur")
+    else:
+        print("Sectiginiz tip dortgendir")
+elif tip=="2":
+    kenar1 = float(input("Birinci kenarin olcusunu giriniz"))
+    kenar2 = float(input("ikinci kenarin olcusunu giriniz"))
+    kenar3 = float(input("ucuncu kenarin olcusunu giriniz"))
+    if kenar1==0 or kenar2==0 or  kenar3==0:
+        print("Kenar uzunluklarini yanlis girdiniz lutfen kontrol adiniz!!!!")
+        quit()
+
+    if abs(kenar1-kenar2)<kenar3<kenar1+kenar2 and abs(kenar1-kenar3)<kenar2<kenar1+kenar3 or abs(kenar3-kenar2)<kenar1<kenar3+kenar2:
+        pass
+    else:
+        print("Verdiginiz kenar   olculari bir  ucken meydana getirmemektedir!!!")
+    if kenar1==kenar2==kenar3:
+        print("Secilen tip eskenar ucgendir")
+    elif kenar1==kenar2!=kenar3 or kenar1!=kenar2==kenar3 or kenar1==kenar3!=kenar2:
+        print("Secilen tip bir ikizkenar ucgendir")

@@ -1,0 +1,34 @@
+#odev6
+try:
+    vize1=float(input("Lutfen birinci vize degerinizi giriniz\t:"))
+    vize2=float(input("Lutfen ikinci vize degerinizi giriniz\t:"))
+    final=float(input("Lutfen ucuncu vize degerinizi giriniz\t:"))
+
+    if not 0<=vize1<=100 or not 0<=vize2<=100 or not 0<=final<=100:
+        print("Girmis oldugunuz not degerleri 0 ile 100 arasinda   olmalidir!!")
+        quit()
+    else:
+        pass
+
+    dersnotu=vize1*0.3+vize2*0.3+final*0.4
+
+    if dersnotu>=90:
+        print("ders notunuz AA")
+    elif dersnotu>=85:
+        print("ders notunuz BA")
+    elif dersnotu>=80:
+        print("ders notunuz BB")
+    elif dersnotu>=75:
+        print("ders notunuz CB")
+    elif dersnotu>=70:
+        print("ders notunuz CC")
+    elif dersnotu>=65:
+        print("ders notunuz DC")
+    elif dersnotu>=60:
+        print("ders notunuz DD")
+    elif dersnotu>=55:
+        print("ders notunuz FD")
+    elif dersnotu<55:
+        print("ders notunuz FF")
+except ValueError or NameError:
+    print("Girmis oldugunuz not degerlerini kontrol   ediniz")

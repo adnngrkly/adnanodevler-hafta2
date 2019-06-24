@@ -1,0 +1,26 @@
+#odev5
+
+
+bakiye=1000
+
+secim=input("""Lutfen Hangi Islemi Secmek Istediginizi Belirtin
+Bakiye Kontrolu\t:1
+Para Yatirma\t:2
+Para Cekme\t:3\n""")
+
+
+if not "0"<secim<"4":
+    print("Yanlis bir islem sectiniz daha sonra tekrar deneyiniz!!!")
+if secim=="1":
+    print("Bakiyeniz",bakiye,"TL")
+elif secim=="2":
+    yatirilan_miktar=float(input("Lutfen yatirmak istediginiz miktari giriniz\t:"))
+    yenibakiye=bakiye+yatirilan_miktar
+    print("Yeni Bakiyeniz\t:",yenibakiye,"TL")
+elif secim=="3":
+    cekilen_miktar=float(input("Lutfen cekmek istediginiz miktari giriniz\t:"))
+    if cekilen_miktar>bakiye:
+        print("Bakiyenizde cekmek istediginiz kadar para bulunmamaktadir!!!")
+    else:
+        yenibakiye=bakiye-cekilen_miktar
+        print("Yeni Bakiyeniz\t:",yenibakiye,"TL")

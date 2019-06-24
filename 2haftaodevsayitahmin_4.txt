@@ -1,0 +1,289 @@
+#2.hafta_odev4
+
+#odev4
+
+
+degisken=4
+
+tahminoyunu="""Bu bir 0 ile 11 arasinda taramifizca belirlenmis bir sayyiyi tahmiun etme oyunu olup oyunun puan kazanimi  su sekildedir:\n
+ilk tahminde bilirseniz\t\t\t\t\t\t: 3 yildiz kazanirsiniz
+ikinci ya da ucuncu tahmminde bilirseniz\t: 2 yildiz kazanirsiniz
+dorduncu yada besinci tahminde bilirseniz\t: 1 yildiz kazanirsiniz\n\n
+ """
+print(tahminoyunu)
+tahmin=int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:")) #ilk tahmin
+
+
+if tahmin<=0 or tahmin>=11: #ilk tahmin farkli aralik
+    print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+    tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))   #ikinci tahmin
+    if tahmin<=0 or tahmin>=11: #ikinci tahmin farkli aralik
+        print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+        tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:")) #ucuncu tahmin
+        if tahmin <= 0 or tahmin >= 11: #ucuncu tahmin farkli aralik
+            print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:")) #dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11: # dorduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:")) #besinci tahmin
+                if tahmin <= 0 or tahmin >= 11: #besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif  tahmin == degisken:
+                        print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                        quit()
+                elif tahmin!=degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:
+                 print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                 quit()
+            elif tahmin!=degisken:
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+
+        elif tahmin == degisken:
+            print("Tebrik ederiz 2 yildiz kazandiniz!!")
+            quit()
+        elif tahmin != degisken:
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11: # durduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci durum yanlis aralik girilimi
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  #besinci durum esit olma durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken: # besinci tahmin  esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:  #dorduncu tahmin esit olma durumu
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken: # dorduncu ttahmin esit olmama durumu
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11: #besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:   # besinci tahmin esitlik durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:   # besinci durum esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+
+    elif tahmin == degisken:  # iikinci tahmin esitlik durumu
+        print("Tebrik ederiz 2 yildiz kazandiniz!!")
+        quit()
+
+    elif tahmin != degisken:  # ikinci durum esit olmama durumu
+        tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # ucuncu tahmin
+        if tahmin <= 0 or tahmin >= 11:  # ucuncu tahmin farkli aralik
+            print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11:  # dorduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken:
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+
+        elif tahmin == degisken:
+            print("Tebrik ederiz 2 yildiz kazandiniz!!")
+            quit()
+        elif tahmin != degisken:
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11:  # durduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci durum yanlis aralik girilimi
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  # besinci durum esit olma durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:  # besinci tahmin  esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:  # dorduncu tahmin esit olma durumu
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken:  # dorduncu ttahmin esit olmama durumu
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  # besinci tahmin esitlik durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:  # besinci durum esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+elif tahmin == degisken:  # ilk tahmin esitlik durumu
+    print("Tebrik ederiz 3 yildiz kazandiniz!!")
+    quit()
+
+elif tahmin!=degisken: #ilk tahmin esit olmama durumu
+    tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # ikinci tahmin
+    if tahmin <= 0 or tahmin >= 11:  # ikinci tahmin farkli aralik
+        print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+        tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # ucuncu tahmin
+        if tahmin <= 0 or tahmin >= 11:  # ucuncu tahmin farkli aralik
+            print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11:  # dorduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken:
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+
+        elif tahmin == degisken:
+            print("Tebrik ederiz 2 yildiz kazandiniz!!")
+            quit()
+        elif tahmin != degisken:
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11:  # durduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci durum yanlis aralik girilimi
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  # besinci durum esit olma durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:  # besinci tahmin  esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:  # dorduncu tahmin esit olma durumu
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken:  # dorduncu ttahmin esit olmama durumu
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  # besinci tahmin esitlik durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:  # besinci durum esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+
+    elif tahmin == degisken:  # iikinci tahmin esitlik durumu
+        print("Tebrik ederiz 2 yildiz kazandiniz!!")
+        quit()
+
+    elif tahmin != degisken:  # ikinci durum esit olmama durumu
+        tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # ucuncu tahmin
+        if tahmin <= 0 or tahmin >= 11:  # ucuncu tahmin farkli aralik
+            print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11:  # dorduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken:
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+
+        elif tahmin == degisken:
+            print("Tebrik ederiz 2 yildiz kazandiniz!!")
+            quit()
+        elif tahmin != degisken:
+            tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # dorduncu tahmin
+            if tahmin <= 0 or tahmin >= 11:  # durduncu tahmin farkli aralik
+                print("Girdiginiz deger 0 ile 11 arasinda olmalidir Tekrar giriniz!!!! ")
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci durum yanlis aralik girilimi
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  # besinci durum esit olma durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:  # besinci tahmin  esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+            elif tahmin == degisken:  # dorduncu tahmin esit olma durumu
+                print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                quit()
+            elif tahmin != degisken:  # dorduncu ttahmin esit olmama durumu
+                tahmin = int(input("Lutfen 0 ile  11 arasinda bir sayi tahmininde bulununuz\t:"))  # besinci tahmin
+                if tahmin <= 0 or tahmin >= 11:  # besinci tahmin farkli aralik
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
+                elif tahmin == degisken:  # besinci tahmin esitlik durumu
+                    print("Tebrik ederiz 1 yildiz kazandiniz!!")
+                    quit()
+                elif tahmin != degisken:  # besinci durum esit olmama durumu
+                    print("5 deneme hakkinizida yaptiniz ve bilemediniz malesef!!!!")
+                    quit()
